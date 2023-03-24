@@ -1,0 +1,167 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: center;
+  min-height: 100%;
+  background-color: #00279b;
+}
+.container h1 {
+  margin-top: 3rem;
+  color: #dcdbdb;
+}
+.kanban_container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1rem 0;
+  width: 100%;
+  height: 100%;
+}
+.kanban_container .board {
+  max-width: 17%;
+  min-height: 520px;
+  max-height: 100%;
+  box-shadow: 0 0 12px #9b9a9a;
+  background-color: #ffff;
+  opacity: 0.8;
+  border-radius: 10px;
+  width: 100%;
+  display: inline-block;
+  padding: 0.8rem;
+}
+.kanban_container .column-title {
+  display: block;
+  text-align: center;
+  margin: 0 auto;
+  padding: 1.5rem 0;
+  font-size: 20px;
+}
+.tasks-container {
+  background: white;
+  min-height: 100px;
+  display: block;
+}
+
+.task {
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border: solid 1px #ccc;
+  border-radius: 14px;
+  box-shadow: 0 0 10px #8b8a8aee;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  cursor: move;
+  background: white;
+  font-size: 17px;
+}
+.cdk-drag-preview {
+  box-sizing: border-box;
+  border-radius: 17px;
+  box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2),
+    0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12);
+}
+
+.cdk-drag-placeholder {
+  opacity: 0;
+}
+
+.cdk-drag-animating {
+  transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
+}
+
+.example-box:last-child {
+  border: none;
+}
+
+.example-list.cdk-drop-list-dragging .example-box:not(.cdk-drag-placeholder) {
+  transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
+}
+
+@media screen and (width: 280px) {
+  .kanban_container .board {
+    min-width: 83%;
+  }
+}
+@media screen and (min-width: 360px) and (max-width: 376px) {
+  .kanban_container {
+    gap: 2rem !important;
+  }
+  .kanban_container .board {
+    min-width: 76%;
+  }
+  .kanban_container > :first-child {
+    margin-left: 2rem !important;
+  }
+  .kanban_container > :last-child {
+    margin-right: 2rem !important;
+  }
+}
+@media screen and (min-width: 390px) and (max-width: 415px) {
+  .kanban_container {
+    gap: 2.8rem !important;
+  }
+  .kanban_container .board {
+    min-width: 72%;
+  }
+  .kanban_container > :first-child {
+    margin-left: 2.8rem !important;
+  }
+  .kanban_container > :last-child {
+    margin-right: 2.8rem !important;
+  }
+}
+@media screen and (width: 540px) {
+  .kanban_container .board {
+    min-width: 42%;
+  }
+}
+@media screen and (width: 768px) {
+  .kanban_container .board {
+    min-width: 28.2% !important;
+  }
+}
+@media screen and (width: 820px) {
+  .kanban_container .board {
+    min-width: 28.4%;
+  }
+}
+@media screen and (width: 912px) {
+  .kanban_container .board {
+    min-width: 29% !important;
+  }
+}
+@media screen and (width: 1024px) {
+  .kanban_container .board {
+    min-width: 21.2%;
+    min-height: 400px !important;
+  }
+}
+@media screen and (width: 1280px) {
+  .kanban_container .board {
+    min-width: 16.8%;
+  }
+}
+@media screen and (min-width: 280px) and (max-width: 1280px) {
+  .kanban_container {
+    overflow-x: scroll;
+    justify-content: space-between;
+    gap: 0.7rem;
+  }
+  .kanban_container .board {
+    margin: 0 auto;
+    margin-bottom: 1rem;
+    min-height: 470px;
+  }
+  .kanban_container > :first-child {
+    margin-left: 0.7rem;
+  }
+  .kanban_container > :last-child {
+    margin-right: 0.7rem;
+  }
+}
